@@ -31,7 +31,7 @@ int main()
         }
 
         int flag = 0;
-        int result[n][m] = {0};
+        int fresult[n][m] = {0};
 
         for(int i = 0; i < n; i++)
         {
@@ -40,17 +40,17 @@ int main()
                 if(a[i][j] == 1)
                 {
                     flag = 1;
-                    result[i][j] = 0;
+                    fresult[i][j] = 0;
                     for(int k = 0; k < m; k++)
                     {
                         if(a[i][k] == 0)
-                            result[i][k] = 1;
+                            fresult[i][k] = 1;
                     } 
 
                     for(int k = 0; k < n; k++)
                     {
                         if(a[k][j] == 0)
-                            result[k][j] = 1;
+                            fresult[k][j] = 1;
                     }
                 }
             }
@@ -73,10 +73,10 @@ int main()
             {
                 for(int j = 0; j < m; j++)
                 {
-                    if(result[i][j] == 0 && a[i][j] == 0)
+                    if(fresult[i][j] == 0 && a[i][j] == 0)
                         cout << 2 << " ";
                     else
-                        cout << result[i][j] << " ";
+                        cout << fresult[i][j] << " ";
                 }
 
                 cout << "\n";
